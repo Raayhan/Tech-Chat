@@ -1,0 +1,29 @@
+{
+  "name": "techchat",
+  "version": "1.0.0",
+  "description": "Real time chat room app for Programmers to make discussions get helps and give suggestions regarding different projects",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raayhan/Tech-Chat.git"
+  },
+  "keywords": [
+    "Node.js",
+    "Express.js",
+    "Socket.io"
+  ],
+  "author": "Rayhan Ahmed Rakib",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Raayhan/Tech-Chat/issues"
+  },
+  "homepage": "https://github.com/Raayhan/Tech-Chat#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "socket.io": "^3.0.4"
+  }
+}
