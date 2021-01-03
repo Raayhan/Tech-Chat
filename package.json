@@ -4,7 +4,8 @@
   "description": "Real time chat room app for Programmers to make discussions get helps and give suggestions regarding different projects",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server",
+    "dev" : "nodemon server"
   },
   "repository": {
     "type": "git",
