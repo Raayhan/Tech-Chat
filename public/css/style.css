@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 :root {
-	--dark-color-a: #ffc266;
-	--dark-color-b: #d4daff;
+	--dark-color-a: rgb(255, 230, 117);
+	--dark-color-b: #f3e4ff;
 	--light-color: #e6e9ff;
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
