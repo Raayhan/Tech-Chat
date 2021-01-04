@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 :root {
-	--dark-color-a: #667aff;
-	--dark-color-b: #7386ff;
+	--dark-color-a: #ffc266;
+	--dark-color-b: #d4daff;
 	--light-color: #e6e9ff;
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
@@ -15,10 +15,12 @@
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 16px;
-	background: var(--light-color);
-	margin: 20px;
+	background-image: radial-gradient( circle 263px at 100.2% 3%,  rgba(12,85,141,1) 31.1%, rgba(205,181,93,1) 36.4%, rgba(244,102,90,1) 50.9%, rgba(199,206,187,1) 60.7%, rgba(249,140,69,1) 72.5%, rgba(12,73,116,1) 72.6% );
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
 }
 
 ul {
@@ -31,25 +33,37 @@ a {
 
 .btn {
 	cursor: pointer;
-	padding: 5px 15px;
-	background: var(--light-color);
-	color: var(--dark-color-a);
+	padding: 6px 15px;
+	background : lightblue;
+	color: rgb(255, 255, 255);
 	border: 0;
-	font-size: 17px;
+	font-size: 16px;
+	font-family: 'Ubuntu', sans-serif;
+}
+.btn-green{
+	background: rgb(0, 122, 10);
+}
+.btn-red{
+	background: rgb(184, 0, 0);
 }
 
 /* Chat Page */
 
 .chat-container {
-	max-width: 1100px;
+	max-width: 1000px;
 	background: #fff;
 	margin: 30px auto;
 	overflow: hidden;
+	margin-bottom: 0%!important;
+	margin-top: 4%;
+	
+	
+
 }
 
 .chat-header {
 	background: var(--dark-color-a);
-	color: #fff;
+	color: rgb(53, 53, 53);
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	padding: 15px;
@@ -65,7 +79,7 @@ a {
 
 .chat-sidebar {
 	background: var(--dark-color-b);
-	color: #fff;
+	color: rgb(53, 53, 53);
 	padding: 20px 20px 60px;
 	overflow-y: scroll;
 }
@@ -101,7 +115,7 @@ a {
 .chat-messages .message .meta {
 	font-size: 15px;
 	font-weight: bold;
-	color: var(--dark-color-b);
+	color: rgb(255, 0, 0);
 	opacity: 0.7;
 	margin-bottom: 7px;
 }
@@ -129,8 +143,8 @@ a {
 /* Join Page */
 .join-container {
 	max-width: 500px;
-	margin: 80px auto;
-	color: #fff;
+	margin: 130px auto;
+	color: rgb(53, 53, 53);
 }
 
 .join-header {
