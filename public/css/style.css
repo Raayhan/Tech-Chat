@@ -17,7 +17,7 @@
 body {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 16px;
-	background-image: radial-gradient( circle 263px at 100.2% 3%,  rgba(12,85,141,1) 31.1%, rgba(205,181,93,1) 36.4%, rgba(244,102,90,1) 50.9%, rgba(199,206,187,1) 60.7%, rgba(249,140,69,1) 72.5%, rgba(12,73,116,1) 72.6% );
+	background-image: linear-gradient( 99.6deg,  rgba(112,128,152,1) 10.6%, rgba(242,227,234,1) 32.9%, rgba(234,202,213,1) 52.7%, rgba(220,227,239,1) 72.8%, rgba(185,205,227,1) 81.1%, rgba(154,180,212,1) 102.4% );
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
@@ -62,8 +62,8 @@ a {
 }
 
 .chat-header {
-	background: var(--dark-color-a);
-	color: rgb(53, 53, 53);
+	background-image: linear-gradient( 105.2deg,  rgba(255,78,78,1) 11.2%, rgba(253,176,71,1) 117.9% );
+	color: rgb(255, 255, 255);
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	padding: 15px;
@@ -78,14 +78,14 @@ a {
 }
 
 .chat-sidebar {
-	background: var(--dark-color-b);
+	background-image: linear-gradient( 109.6deg,  rgba(223,234,247,1) 11.2%, rgba(244,248,252,1) 91.1% );
 	color: rgb(53, 53, 53);
 	padding: 20px 20px 60px;
 	overflow-y: scroll;
 }
 
 .chat-sidebar h2 {
-	font-size: 20px;
+	font-size: 16px;
 	background: rgba(0, 0, 0, 0.1);
 	padding: 10px;
 	margin-bottom: 20px;
@@ -127,6 +127,7 @@ a {
 .chat-form-container {
 	padding: 20px 30px;
 	background-color: var(--dark-color-a);
+	
 }
 
 .chat-form-container form {
@@ -138,26 +139,28 @@ a {
 	padding: 5px;
 	height: 40px;
 	flex: 1;
+	
 }
 
 /* Join Page */
 .join-container {
-	max-width: 500px;
-	margin: 130px auto;
+	max-width: 400px;
+	margin: 100px auto;
 	color: rgb(53, 53, 53);
 }
 
 .join-header {
 	text-align: center;
 	padding: 20px;
-	background: var(--dark-color-a);
-	border-top-left-radius: 5px;
+	background-image: linear-gradient( 105.2deg,  rgba(255,78,78,1) 11.2%, rgba(253,176,71,1) 117.9% );
 	border-top-right-radius: 5px;
+	color: white;
+	font-weight: bold;
 }
 
 .join-main {
 	padding: 30px 40px;
-	background: var(--dark-color-b);
+	background:  #37383f;
 }
 
 .join-main p {
