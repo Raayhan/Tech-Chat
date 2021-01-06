@@ -3,6 +3,7 @@ const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
 const formatMessage = require('./utils/messages');
+const {userJoin,getCurrentUser} = require('./utils/users');
 
 const app = express();
 const server = http.createServer(app);
@@ -15,17 +16,22 @@ const Admin = 'TechChat';
 //Run when a client connects
 
 io.on('connection', socket =>{
-   
-    //Welcome current user
-    socket.emit('message', formatMessage(Admin,'Welcome to Tech Chat'));
+
+    socket.on('joinSection', ({username, section}) =>{
+
+        const user = userJoin(socket.id, username, section);
+        socket.join(user.section);
+
+         //Welcome current user
+    socket.emit('message', formatMessage(Admin,'Welcome to Tech Chat!'));
 
     //Broadcast when a user connects
-    socket.broadcast.emit('message', formatMessage(Admin,'A user has joined the chat'));
+    socket.broadcast.to(user.section).emit('message', formatMessage(Admin,`${user.username} has joined the chat`));
 
-    //Runs when client disconnects
-    socket.on('disconnect', ()=>{
-        io.emit('message', formatMessage(Admin,'A user has left the chat'));
-    })
+    });
+   
+   
+
 
     //Listen for chatMessage
 
@@ -33,6 +39,12 @@ io.on('connection', socket =>{
 
         io.emit('message', formatMessage('USER', msg));
     });
+
+    
+    //Runs when client disconnects
+    socket.on('disconnect', ()=>{
+        io.emit('message', formatMessage(Admin,'A user has left the chat'));
+    })
 
 });
 const PORT = 3000 || process.env.PORT;
