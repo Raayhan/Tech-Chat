@@ -37,7 +37,9 @@ io.on('connection', socket =>{
 
     socket.on('chatMessage', (msg) => {
 
-        io.emit('message', formatMessage('USER', msg));
+        const user = getCurrentUser(socket.id);
+
+        io.to(user.section).emit('message', formatMessage(user.username, msg));
     });
 
     
