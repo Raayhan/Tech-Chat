@@ -3,7 +3,7 @@ const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
 const formatMessage = require('./utils/messages');
-const {userJoin,getCurrentUser} = require('./utils/users');
+const {userJoin,getCurrentUser,userLeave,getSectionUsers} = require('./utils/users');
 
 const app = express();
 const server = http.createServer(app);
@@ -28,9 +28,15 @@ io.on('connection', socket =>{
     //Broadcast when a user connects
     socket.broadcast.to(user.section).emit('message', formatMessage(Admin,`${user.username} has joined the chat`));
 
+     // Send users & section info
+
+   io.to(user.section).emit('sectionUsers',{
+    section : user.section,
+    users: getSectionUsers(user.section)
+        });
     });
    
-   
+  
 
 
     //Listen for chatMessage
@@ -45,7 +51,19 @@ io.on('connection', socket =>{
     
     //Runs when client disconnects
     socket.on('disconnect', ()=>{
-        io.emit('message', formatMessage(Admin,'A user has left the chat'));
+        const user = userLeave(socket.id);
+        if (user){
+            io.to(user.section).emit('message', formatMessage(Admin,`${user.username} has left the chat`));
+        
+            // Send users & section info
+
+            io.to(user.section).emit('sectionUsers',{
+                section : user.section,
+                users: getSectionUsers(user.section)
+            });
+
+        }
+        
     })
 
 });

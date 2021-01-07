@@ -1,5 +1,7 @@
 const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
+const sectionName = document.getElementById('section-name');
+const userList = document.getElementById('users');
 
 //Get Username & Section from URL
 const { username, section } = Qs.parse(location.search, {
@@ -12,6 +14,13 @@ const socket = io();
 //Join Chat Section
 
 socket.emit('joinSection',{username, section});
+
+//Get Section and Users
+socket.on('sectionUsers', ({section, users}) =>{
+   outputSectionName(section);
+   outputUsers(users);
+
+})
 
 //Message from server
 
@@ -50,4 +59,19 @@ function outputMessage(message){
      ${message.text}
    </p>`;
    document.querySelector('.chat-messages').appendChild(div);
+}
+
+//Add Section name to DOM
+function outputSectionName(section){
+
+   sectionName.innerText = section;
+
+}
+
+//Add users to DOM
+
+function outputUsers(users){
+   userList.innerHTML = `
+   ${users.map(user => `<li>${user.username}</li>`).join('')}
+   ` ;
 }
