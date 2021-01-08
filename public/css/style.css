@@ -16,8 +16,8 @@
 
 body {
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 16px;
-	background-image: linear-gradient( 99.6deg,  rgba(112,128,152,1) 10.6%, rgba(242,227,234,1) 32.9%, rgba(234,202,213,1) 52.7%, rgba(220,227,239,1) 72.8%, rgba(185,205,227,1) 81.1%, rgba(154,180,212,1) 102.4% );
+	font-size: 12px;
+	background-image: radial-gradient( circle 263px at 100.2% 3%,  rgba(12,85,141,1) 31.1%, rgba(205,181,93,1) 36.4%, rgba(244,102,90,1) 50.9%, rgba(199,206,187,1) 60.7%, rgba(249,140,69,1) 72.5%, rgba(12,73,116,1) 72.6% );
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
@@ -37,14 +37,44 @@ a {
 	background : lightblue;
 	color: rgb(255, 255, 255);
 	border: 0;
-	font-size: 16px;
+	font-size: 12px;
 	font-family: 'Ubuntu', sans-serif;
 }
 .btn-green{
-	background: rgb(0, 122, 10);
+	background: rgb(0, 122, 10)!important;
+	color:white!important;
 }
 .btn-red{
-	background: rgb(184, 0, 0);
+	background: rgb(184, 0, 0)!important;
+	color:white!important;
+}
+.navbar-brand{
+    font-family: 'Ubuntu', sans-serif;
+    color:rgb(255, 255, 255)!important;
+    font-size: 28px!important;
+    font-weight: bold;
+}
+
+.main{
+	
+	font-family: 'Ubuntu', sans-serif;
+	background-image: radial-gradient( circle 328px at 2.9% 15%,  rgba(191,224,251,1) 0%, rgba(232,233,251,1) 25.8%, rgba(252,239,250,1) 50.8%, rgba(234,251,251,1) 77.6%, rgba(240,251,244,1) 100.7% );
+	margin-top :10%;
+	padding-top:5%;
+	padding-bottom:10%;
+	margin-bottom:0px;
+}
+.label{
+font-size: 12px!important;
+padding: 0px!important;
+color: rgb(68, 68, 68);
+}
+.logo{
+	color:rgb(46, 46, 46);
+}
+.jumbotron {
+	border-radius: 20px ;
+	
 }
 
 /* Chat Page */
@@ -62,10 +92,10 @@ a {
 }
 
 .chat-header {
-	background-image: linear-gradient( 105.2deg,  rgba(255,78,78,1) 11.2%, rgba(253,176,71,1) 117.9% );
-	color: rgb(255, 255, 255);
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+	background-image: radial-gradient( circle 810px at 19.2% 35.5%,  rgba(253,230,143,1) 0%, rgba(253,168,137,1) 90% );
+	color: rgb(87, 87, 87);
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
 	padding: 15px;
 	display: flex;
 	align-items: center;
@@ -103,6 +133,7 @@ a {
 	padding: 30px;
 	max-height: 500px;
 	overflow-y: scroll;
+	height: 60vh;
 }
 
 .chat-messages .message {
@@ -115,7 +146,7 @@ a {
 .chat-messages .message .meta {
 	font-size: 15px;
 	font-weight: bold;
-	color: rgb(255, 0, 0);
+	color: rgba(12,85,141,1);
 	opacity: 0.7;
 	margin-bottom: 7px;
 }
@@ -142,65 +173,6 @@ a {
 	
 }
 
-/* Join Page */
-.join-container {
-	max-width: 400px;
-	margin: 100px auto;
-	color: rgb(53, 53, 53);
-}
-
-.join-header {
-	text-align: center;
-	padding: 20px;
-	background-image: linear-gradient( 105.2deg,  rgba(255,78,78,1) 11.2%, rgba(253,176,71,1) 117.9% );
-	border-top-right-radius: 5px;
-	color: white;
-	font-weight: bold;
-}
-
-.join-main {
-	padding: 30px 40px;
-	background-image: linear-gradient( 112.1deg,  rgba(32,38,57,1) 11.4%, rgba(63,76,119,1) 70.2% );
-}
-
-.join-main p {
-	margin-bottom: 20px;
-}
-
-.join-main .form-control {
-	margin-bottom: 20px;
-	background-image: linear-gradient( 89.9deg,  rgba(208,246,255,1) 0.1%, rgba(255,237,237,1) 47.9%, rgba(255,255,231,1) 100.2% );
-}
-
-.join-main label {
-	display: block;
-	margin-bottom: 5px;
-	font-family: 'Ubuntu', sans-serif;
-	font-weight: bold;
-}
-
-.join-main input[type='text'] {
-	font-size: 16px;
-	padding: 5px;
-	height: 40px;
-	width: 100%;
-	font-family: 'Ubuntu', sans-serif;
-	
-}
-
-.join-main select {
-	font-size: 16px;
-	padding: 5px;
-	height: 40px;
-	width: 100%;
-	font-family: 'Ubuntu', sans-serif;
-}
-
-.join-main .btn {
-	margin-top: 20px;
-	width: 100%;
-}
-
 @media (max-width: 700px) {
 	.chat-main {
 		display: block;
@@ -208,5 +180,8 @@ a {
 
 	.chat-sidebar {
 		display: none;
+	}
+	.chat-header h3{
+		font-size: 20px!important;
 	}
 }

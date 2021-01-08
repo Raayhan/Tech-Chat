@@ -9,12 +9,26 @@
               type = "image/x-icon"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
+  integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" 
+  crossorigin="anonymous"
+/>
   <title>Tech Chat | Conversations</title>
 </head>
 <body>
-  <div class="chat-container">
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Ninth navbar example">
+    <div class="container-xl">
+      <a class="navbar-brand" href="/"><i class="fas fa-code"></i> TechChat</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+    <!-- Navbar Ends -->
+  <div class="chat-container shadow">
     <header class="chat-header">
-      <h2><i class="fas fa-code"></i> Tech Chat</h2>
+      <h3><i class="fas fa-comments"></i> Conversations</h3>
       <a href="index.html" class="btn btn-red">Leave Room</a>
     </header>
     <main class="chat-main">
@@ -36,7 +50,7 @@
           id="msg"
           type="text"
           placeholder="Enter Message"
-          required
+          required autofocus
           autocomplete="off"
         />
         <button class="btn btn-green"><i class="fas fa-paper-plane"></i> Send</button>
