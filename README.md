@@ -2,9 +2,9 @@
 
 # Tech-Chat
 Real time chat room app for Programmers to make discussions get helps and give suggestions regarding different projects
-<p  align=center>
+
 ![](https://i.ibb.co/yhFNpG5/Screenshot-2021-01-09-002444.png)
-</p>
+
 
 
 
