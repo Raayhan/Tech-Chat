@@ -8,7 +8,7 @@ Real time chat room app for Programmers to make discussions get helps and give s
 
 ###### Author
 Rayhan Ahmed Rakib &copy;
-1.0.0
+
 ###### Version
 1.0.0
 ###### License
